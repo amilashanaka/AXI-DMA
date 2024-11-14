@@ -15,9 +15,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axi_dma
 # IP: bd/dma/ip/dma_xbar_1/dma_xbar_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_xbar_1 || ORIG_REF_NAME==dma_xbar_1} -quiet] -quiet
 
-# IP: bd/dma/ip/dma_auto_pc_0/dma_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_auto_pc_0 || ORIG_REF_NAME==dma_auto_pc_0} -quiet] -quiet
-
 # IP: bd/dma/ip/dma_ps7_0_axi_periph_0/dma_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_ps7_0_axi_periph_0 || ORIG_REF_NAME==dma_ps7_0_axi_periph_0} -quiet] -quiet
 
@@ -27,12 +24,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_rst_ps7
 # IP: bd/dma/ip/dma_xbar_0/dma_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_xbar_0 || ORIG_REF_NAME==dma_xbar_0} -quiet] -quiet
 
-# IP: bd/dma/ip/dma_auto_pc_1/dma_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_auto_pc_1 || ORIG_REF_NAME==dma_auto_pc_1} -quiet] -quiet
-
-# IP: bd/dma/ip/dma_s01_mmu_0/dma_s01_mmu_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_s01_mmu_0 || ORIG_REF_NAME==dma_s01_mmu_0} -quiet] -quiet
-
 # IP: bd/dma/ip/dma_axi_mem_intercon_0/dma_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axi_mem_intercon_0 || ORIG_REF_NAME==dma_axi_mem_intercon_0} -quiet] -quiet
 
@@ -41,5 +32,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_axis_da
 
 # IP: bd/dma/ip/dma_AD1DMA_0_0/dma_AD1DMA_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_AD1DMA_0_0 || ORIG_REF_NAME==dma_AD1DMA_0_0} -quiet] -quiet
+
+# IP: bd/dma/ip/dma_auto_pc_0/dma_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_auto_pc_0 || ORIG_REF_NAME==dma_auto_pc_0} -quiet] -quiet
+
+# IP: bd/dma/ip/dma_auto_pc_1/dma_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_auto_pc_1 || ORIG_REF_NAME==dma_auto_pc_1} -quiet] -quiet
+
+# IP: bd/dma/ip/dma_s01_mmu_0/dma_s01_mmu_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_s01_mmu_0 || ORIG_REF_NAME==dma_s01_mmu_0} -quiet] -quiet
 
 # XDC: c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/dma_ooc.xdc

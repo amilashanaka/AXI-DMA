@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -82,17 +83,17 @@ set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/P
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_axi_dma_0_0/dma_axi_dma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_axi_dma_0_0/dma_axi_dma_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_xbar_1/dma_xbar_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_auto_pc_0/dma_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_rst_ps7_0_50M_0/dma_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_rst_ps7_0_50M_0/dma_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_rst_ps7_0_50M_0/dma_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_xbar_0/dma_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_auto_pc_1/dma_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_s01_mmu_0/dma_s01_mmu_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_axis_data_fifo_0_0/dma_axis_data_fifo_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_AD1DMA_0_0/src/pmod_bridge_0/pmod_bridge_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_AD1DMA_0_0/src/pmod_bridge_0/src/pmod_concat_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_AD1DMA_0_0/dma_AD1DMA_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_auto_pc_0/dma_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_auto_pc_1/dma_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_s01_mmu_0/dma_s01_mmu_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/dma_ooc.xdc]
 
 OPTRACE "Adding files" END { }

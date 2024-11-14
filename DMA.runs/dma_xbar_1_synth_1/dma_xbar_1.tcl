@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "dma_xbar_1_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -78,7 +77,7 @@ set_property ip_output_repo c:/Projects/ERN24004/Projects/DMA/DMA.cache/ip [curr
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Projects/ERN24004/Projects/DMA/DMA.srcs/sources_1/bd/dma/ip/dma_xbar_1/dma_xbar_1.xci
+read_ip -quiet C:/Projects/ERN24004/Projects/DMA/DMA.srcs/sources_1/bd/dma/ip/dma_xbar_1/dma_xbar_1.xci
 set_property used_in_implementation false [get_files -all c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_xbar_1/dma_xbar_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

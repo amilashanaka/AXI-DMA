@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Nov 13 15:55:50 2024" VIVADOVERSION="2024.1.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 14 11:06:55 2024" VIVADOVERSION="2024.1.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:cora-z7-07s:part0:1.1" DEVICE="7z007s" NAME="dma" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -307,7 +307,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="38" FULLNAME="/AD1DMA_0" HWVERSION="1.0" INSTANCE="AD1DMA_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AD1DMA" VLNV="spicerconsulting:IP:AD1DMA:1.0">
+    <MODULE COREREVISION="39" FULLNAME="/AD1DMA_0" HWVERSION="1.0" INSTANCE="AD1DMA_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AD1DMA" VLNV="spicerconsulting:IP:AD1DMA:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="AXI_LITE_SAMPLE" NAME="Reg0" RANGE="4096" USAGE=""/>
@@ -525,7 +525,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axi_error" SIGIS="undef"/>
-        <PORT DIR="I" NAME="m_axi_init_axi_txn" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_axi_init_axi_txn" SIGIS="undef" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="m_axi_rdata" RIGHT="0" SIGIS="undef" SIGNAME="AD1DMA_0_m_axi_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S01_AXI_rdata"/>
@@ -5016,6 +5020,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S01_ACLK"/>
             <CONNECTION INSTANCE="AD1DMA_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="AD1DMA_0" PORT="m_axi_init_axi_txn"/>
             <CONNECTION INSTANCE="AD1DMA_0" PORT="m_axi_aclk"/>
           </CONNECTIONS>
         </PORT>

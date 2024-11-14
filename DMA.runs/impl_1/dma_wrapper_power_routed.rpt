@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1.2 (win64) Build 5164865 Thu Sep  5 14:37:11 MDT 2024
-| Date             : Wed Nov 13 15:58:28 2024
+| Date             : Thu Nov 14 11:09:47 2024
 | Host             : DonGun running 64-bit major release  (build 9200)
 | Command          : report_power -file dma_wrapper_power_routed.rpt -pb dma_wrapper_power_summary_routed.pb -rpx dma_wrapper_power_routed.rpx
 | Design           : dma_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.378        |
+| Total On-Chip Power (W)  | 1.379        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.263        |
+| Dynamic (W)              | 1.264        |
 | Device Static (W)        | 0.115        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 69.1         |
@@ -54,19 +54,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.007 |        3 |       --- |             --- |
 | Slice Logic              |     0.001 |     8714 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     2870 |     14400 |           19.93 |
+|   LUT as Logic           |     0.001 |     2868 |     14400 |           19.92 |
 |   CARRY4                 |    <0.001 |      129 |      4400 |            2.93 |
-|   Register               |    <0.001 |     4219 |     28800 |           14.65 |
+|   Register               |    <0.001 |     4222 |     28800 |           14.66 |
+|   F7/F8 Muxes            |    <0.001 |        5 |     17600 |            0.03 |
 |   LUT as Shift Register  |    <0.001 |      172 |      6000 |            2.87 |
-|   Others                 |     0.000 |      443 |       --- |             --- |
-|   F7/F8 Muxes            |     0.000 |        5 |     17600 |            0.03 |
+|   Others                 |     0.000 |      442 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       18 |      6000 |            0.30 |
-| Signals                  |     0.001 |     6468 |       --- |             --- |
+| Signals                  |     0.002 |     6473 |       --- |             --- |
 | Block RAM                |    <0.001 |      4.5 |        50 |            9.00 |
 | I/O                      |     0.000 |        8 |       100 |            8.00 |
 | PS7                      |     1.253 |        1 |       --- |             --- |
 | Static Power             |     0.115 |          |           |                 |
-| Total                    |     1.378 |          |           |                 |
+| Total                    |     1.379 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.010 |      0.006 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.017 |       0.011 |      0.006 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -152,8 +152,10 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| dma_wrapper              |     1.263 |
-|   dma_i                  |     1.263 |
+| dma_wrapper              |     1.264 |
+|   dma_i                  |     1.264 |
+|     AD1DMA_0             |     0.002 |
+|       inst               |     0.002 |
 |     axi_dma_0            |     0.005 |
 |       U0                 |     0.005 |
 |     axi_mem_intercon     |     0.001 |

@@ -7,7 +7,8 @@
       "name": "dma",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.1.2"
+      "tool_version": "2024.1.2",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -2455,7 +2456,7 @@
       },
       "AD1DMA_0": {
         "vlnv": "spicerconsulting:IP:AD1DMA:1.0",
-        "ip_revision": "38",
+        "ip_revision": "39",
         "xci_name": "dma_AD1DMA_0_0",
         "xci_path": "ip\\dma_AD1DMA_0_0\\dma_AD1DMA_0_0.xci",
         "inst_hier_path": "AD1DMA_0",
@@ -2584,8 +2585,8 @@
           "ps7_0_axi_periph/M01_ACLK",
           "ps7_0_axi_periph/S01_ACLK",
           "AD1DMA_0/s00_axi_aclk",
-          "AD1DMA_0/m_axi_aclk",
-          "AD1DMA_0/m_axi_init_axi_txn"
+          "AD1DMA_0/m_axi_init_axi_txn",
+          "AD1DMA_0/m_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.1.2 (win64) Build 5164865 Thu Sep  5 14:37:11 MDT 2024
 // Date        : Wed Nov 13 14:38:03 2024
 // Host        : DonGun running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Projects/ERN24004/Projects/DMA/DMA.gen/sources_1/bd/dma/ip/dma_xbar_0/dma_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top dma_xbar_0 -prefix
+//               dma_xbar_0_ dma_xbar_0_stub.v
 // Design      : dma_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z007sclg400-1

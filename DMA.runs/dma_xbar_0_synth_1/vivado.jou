@@ -3,8 +3,8 @@
 # SW Build 5164865 on Thu Sep  5 14:37:11 MDT 2024
 # IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
 # SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
-# Start of session at: Wed Nov 13 14:37:09 2024
-# Process ID: 28748
+# Start of session at: Thu Nov 14 10:08:23 2024
+# Process ID: 14808
 # Current directory: C:/Projects/ERN24004/Projects/DMA/DMA.runs/dma_xbar_0_synth_1
 # Command line: vivado.exe -log dma_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_xbar_0.tcl
 # Log file: C:/Projects/ERN24004/Projects/DMA/DMA.runs/dma_xbar_0_synth_1/dma_xbar_0.vds
@@ -19,6 +19,6 @@
 # Host memory       :34124 MB
 # Swap memory       :2147 MB
 # Total Virtual     :36272 MB
-# Available Virtual :18212 MB
+# Available Virtual :17015 MB
 #-----------------------------------------------------------
 source dma_xbar_0.tcl -notrace

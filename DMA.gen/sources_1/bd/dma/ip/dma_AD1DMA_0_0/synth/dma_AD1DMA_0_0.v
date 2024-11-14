@@ -48,7 +48,7 @@
 
 
 // IP VLNV: spicerconsulting:IP:AD1DMA:1.0
-// IP Revision: 38
+// IP Revision: 39
 
 (* X_CORE_INFO = "PmodAD1_v1_0,Vivado 2024.1.2" *)
 (* CHECK_LICENSE_TYPE = "dma_AD1DMA_0_0,PmodAD1_v1_0,{}" *)

@@ -15,11 +15,11 @@ vlib modelsim_lib/msim/lib_cdc_v1_0_3
 vlib modelsim_lib/msim/axi_datamover_v5_1_34
 vlib modelsim_lib/msim/axi_sg_v4_1_18
 vlib modelsim_lib/msim/axi_dma_v7_1_33
-vlib modelsim_lib/msim/proc_sys_reset_v5_0_15
 vlib modelsim_lib/msim/generic_baseblocks_v2_1_2
 vlib modelsim_lib/msim/axi_register_slice_v2_1_32
 vlib modelsim_lib/msim/axi_data_fifo_v2_1_31
 vlib modelsim_lib/msim/axi_crossbar_v2_1_33
+vlib modelsim_lib/msim/proc_sys_reset_v5_0_15
 vlib modelsim_lib/msim/axis_infrastructure_v1_1_1
 vlib modelsim_lib/msim/axis_data_fifo_v2_0_14
 vlib modelsim_lib/msim/axi_protocol_converter_v2_1_32
@@ -39,11 +39,11 @@ vmap lib_cdc_v1_0_3 modelsim_lib/msim/lib_cdc_v1_0_3
 vmap axi_datamover_v5_1_34 modelsim_lib/msim/axi_datamover_v5_1_34
 vmap axi_sg_v4_1_18 modelsim_lib/msim/axi_sg_v4_1_18
 vmap axi_dma_v7_1_33 modelsim_lib/msim/axi_dma_v7_1_33
-vmap proc_sys_reset_v5_0_15 modelsim_lib/msim/proc_sys_reset_v5_0_15
 vmap generic_baseblocks_v2_1_2 modelsim_lib/msim/generic_baseblocks_v2_1_2
 vmap axi_register_slice_v2_1_32 modelsim_lib/msim/axi_register_slice_v2_1_32
 vmap axi_data_fifo_v2_1_31 modelsim_lib/msim/axi_data_fifo_v2_1_31
 vmap axi_crossbar_v2_1_33 modelsim_lib/msim/axi_crossbar_v2_1_33
+vmap proc_sys_reset_v5_0_15 modelsim_lib/msim/proc_sys_reset_v5_0_15
 vmap axis_infrastructure_v1_1_1 modelsim_lib/msim/axis_infrastructure_v1_1_1
 vmap axis_data_fifo_v2_0_14 modelsim_lib/msim/axis_data_fifo_v2_0_14
 vmap axi_protocol_converter_v2_1_32 modelsim_lib/msim/axi_protocol_converter_v2_1_32
@@ -113,12 +113,6 @@ vcom -work axi_dma_v7_1_33  -93  \
 vcom -work xil_defaultlib  -93  \
 "../../../bd/dma/ip/dma_axi_dma_0_0/sim/dma_axi_dma_0_0.vhd" \
 
-vcom -work proc_sys_reset_v5_0_15  -93  \
-"../../../../DMA.gen/sources_1/bd/dma/ipshared/3a26/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib  -93  \
-"../../../bd/dma/ip/dma_rst_ps7_0_50M_0/sim/dma_rst_ps7_0_50M_0.vhd" \
-
 vlog -work generic_baseblocks_v2_1_2  -incr -mfcu  "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/ec67/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/d47c/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/434f/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../DMA.gen/sources_1/bd/dma/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
@@ -132,6 +126,15 @@ vlog -work axi_crossbar_v2_1_33  -incr -mfcu  "+incdir+../../../../DMA.gen/sourc
 "../../../../DMA.gen/sources_1/bd/dma/ipshared/ef26/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/ec67/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/d47c/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/434f/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
+"../../../bd/dma/ip/dma_xbar_1/sim/dma_xbar_1.v" \
+
+vcom -work proc_sys_reset_v5_0_15  -93  \
+"../../../../DMA.gen/sources_1/bd/dma/ipshared/3a26/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/dma/ip/dma_rst_ps7_0_50M_0/sim/dma_rst_ps7_0_50M_0.vhd" \
+
+vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/ec67/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/d47c/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/434f/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/dma/ip/dma_xbar_0/sim/dma_xbar_0.v" \
 
 vlog -work axis_infrastructure_v1_1_1  -incr -mfcu  "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/ec67/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/d47c/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/434f/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
@@ -142,13 +145,12 @@ vlog -work axis_data_fifo_v2_0_14  -incr -mfcu  "+incdir+../../../../DMA.gen/sou
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/ec67/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/d47c/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/434f/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/dma/ip/dma_axis_data_fifo_0_0/sim/dma_axis_data_fifo_0_0.v" \
-"../../../bd/dma/ip/dma_xbar_1/sim/dma_xbar_1.v" \
 "../../../../DMA.gen/sources_1/bd/dma/ip/dma_AD1DMA_0_0/src/pmod_bridge_0/src/pmod_concat.v" \
 "../../../bd/dma/ip/dma_AD1DMA_0_0/src/pmod_bridge_0/sim/pmod_bridge_0.v" \
-"../../../../DMA.gen/sources_1/bd/dma/ipshared/0e9c/src/ad1_spi.v" \
-"../../../../DMA.gen/sources_1/bd/dma/ipshared/0e9c/hdl/PmodAD1_v1_0_S00_AXI.v" \
-"../../../bd/dma/ipshared/0e9c/hdl/ad1_dma_master_lite_v1_0_M_AXI.v" \
-"../../../../DMA.gen/sources_1/bd/dma/ipshared/0e9c/hdl/PmodAD1_v1_0.v" \
+"../../../../DMA.gen/sources_1/bd/dma/ipshared/070a/src/ad1_spi.v" \
+"../../../../DMA.gen/sources_1/bd/dma/ipshared/070a/hdl/PmodAD1_v1_0_S00_AXI.v" \
+"../../../bd/dma/ipshared/070a/hdl/ad1_dma_master_lite_v1_0_M_AXI.v" \
+"../../../../DMA.gen/sources_1/bd/dma/ipshared/070a/hdl/PmodAD1_v1_0.v" \
 "../../../bd/dma/ip/dma_AD1DMA_0_0/sim/dma_AD1DMA_0_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_32  -incr -mfcu  "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/ec67/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/d47c/hdl" "+incdir+../../../../DMA.gen/sources_1/bd/dma/ipshared/434f/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \

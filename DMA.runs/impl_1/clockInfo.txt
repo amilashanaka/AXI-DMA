@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.1.2
-| Date         : Wed Nov 13 15:58:08 2024
+| Date         : Thu Nov 14 11:09:26 2024
 | Host         : DonGun
 | Design       : design_1
 | Device       : xc7z007s-clg400-1--

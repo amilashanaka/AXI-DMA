@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1.2 (win64) Build 5164865 Thu Sep  5 14:37:11 MDT 2024
-//Date        : Wed Nov 13 15:29:27 2024
+//Date        : Thu Nov 14 11:06:54 2024
 //Host        : DonGun running 64-bit major release  (build 9200)
 //Command     : generate_target dma.bd
 //Design      : dma
@@ -383,7 +383,7 @@ module dma
         .m_axi_bready(AD1DMA_0_m_axi_BREADY),
         .m_axi_bresp(AD1DMA_0_m_axi_BRESP),
         .m_axi_bvalid(AD1DMA_0_m_axi_BVALID),
-        .m_axi_init_axi_txn(1'b0),
+        .m_axi_init_axi_txn(processing_system7_0_FCLK_CLK0),
         .m_axi_rdata(AD1DMA_0_m_axi_RDATA),
         .m_axi_rready(AD1DMA_0_m_axi_RREADY),
         .m_axi_rresp(AD1DMA_0_m_axi_RRESP),
